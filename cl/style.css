@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.title{
+  width: 120px;
+  margin: 50px auto;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 150px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+input[type="button"]{
+  width: 75px;
+  height: 30px;
+  margin: 2px;
+}
+
+ul{
+  text-align: center;
+  list-style-type: none;
+}
+
+button.delete {
+  background-color: #f44336;
+}
+
+result
+#result{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+/* history */
+#history{ 
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.item {
+  margin-bottom: 5px;
+}
+
+.swap-form {
+  border-radius: 5px;
+  text-align: center;
+}
+
+.swap-form label {
+  display: inline;
+  margin-right: 5px;
+}
+.swap-form button{
+  width: 95px;
+  height: 30px;
+  margin: 2px;
+}
+.swap-form input{
+  width: 40px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+/* ... existing styles ... */
+.sum-form {
+  text-align: center;
+  margin-top: 100px;
+  height: 30px;
+  margin: 2px;
+}
+.sum-form button{
+  text-align: center;
+  margin-top: 100px;
+  width: 95px;
+  height: 30px;
+  margin: 2px;
+}
+
+/* date */
+h1 {
+  text-align: center;
+}
+
+.format-selection {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#datetime-display {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  
+  margin-bottom: 10px;
+  padding: 5px;
+}

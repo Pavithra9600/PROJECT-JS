@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator working</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <h1>Date and Time</h1>
+            <div class="format-selection">
+                <label for="format">Select a format:</label>
+                <select id="format" onchange="updateDateTimeFormat()">
+                  <option value="date">1. Date (MM/DD/YYYY)</option>
+                  <option value="time">2. Time (HH:MM:SS)</option>
+                  <option value="datetime">3. Date and Time (MM/DD/YYYY HH:MM:SS)</option>
+                  <option value="shortdate">4. Short Date (M/D/YY)</option>
+                  <option value="shorttime">5. Short Time (HH:MM AM/PM)</option>
+                  <option value="longdatetime">6. Long Date and Time (MMMM D, YYYY HH:MM:SS)</option>
+                  <option value="weekday">7. Weekday (Monday, Tuesday, etc.)</option>
+                  <option value="iso">8. ISO 8601 Format (YYYY-MM-DDTHH:MM:SSZ)</option>
+                  <option value="custom">9. Custom Format</option>
+                </select>
+              </div>
+              
+              <div id="datetime-display"></div>
+        </div>
+        <div class="column">
+            <div class="title">Calculator Project  
+                <br>
+                <br>
+                <table border="0" >
+                    <tr>
+                        <td><input type="button" value="DeleteAll" onclick="deleteAllHistory('DeleteAll')"></td>
+                        <!-- <button onclick="deleteAllHistory()">Delete All</button> -->
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="text" id="result"></td>
+                        <td><input type="button" value="c" onclick="clroutput('C')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="1" onclick="display('1')"></td>
+                        <td><input type="button" value="2" onclick="display('2')"></td>
+                        <td><input type="button" value="3" onclick="display('3')"></td>
+                        <td><input type="button" value="/" onclick="displayOperator('/')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="4" onclick="display('4')"></td>
+                        <td><input type="button" value="5" onclick="display('5')"></td>
+                        <td><input type="button" value="6" onclick="display('6')"></td>
+                        <td><input type="button" value="-" onclick="displayOperator('-')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="7" onclick="display('7')"></td>
+                        <td><input type="button" value="8" onclick="display('8')"></td>
+                        <td><input type="button" value="9" onclick="display('9')"></td>
+                        <td><input type="button" value="+" onclick="displayOperator('+')"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="." onclick="display('.')"></td>
+                        <td><input type="button" value="0" onclick="display('0')"></td>
+                        <td><input type="button" value="=" onclick="equate('=')"></td> <!-- = sign panika kudhadhu.. -->
+                        <td><input type="button" value="*" onclick="displayOperator('*')"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="swap-form">
+                <label for="index1-input">1st index to swap</label>
+                <input type="number" id="index1-input">
+                <label for="index2-input">2nd index to swap</label>
+                <input type="number" id="index2-input">
+                <button onclick="swapItems()">Click Swap!</button>
+              </div>
+            </div>
+            <h2><ul id="history"></ul></h2>
+            <div class="sum-form">
+                <button onclick="calculateSum()">Total</button>
+                <span id="sumResult"></span>
+            </div>
+        </div>
+    </div>
+    
+   
+  
+   
+
+  
+</body>
+</html>
