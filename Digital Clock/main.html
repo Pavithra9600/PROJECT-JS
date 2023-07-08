@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .Clock{
+            position: absolute;
+            color: wheat;
+            top:50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 60px;
+            font-family: Orbitron;
+            letter-spacing: 7px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="D-Clock" class="Clock"></h1>
+    <script type="text/javascript">
+        function showTime(){
+            var date = new Date();
+            var H = date.getHours();
+            var M = date.getMinutes();
+            var S = date.getSeconds();
+            var session = "AM";
+
+            if(H==0){
+                H = 12;
+            }
+            if(H>12){
+                H=H-12;
+                session = "PM";
+            }
+
+            // if(H>12){
+            //     H = H - 12;
+            //     session = "PM";
+            // }
+            // if(H<10){
+            //     H = "0" + H;
+            // }
+            // if(M<10){
+            //     M = "0" + M;
+            // }
+            // if(S<10){
+            //     S = "0" + S;
+            // }
+
+            H = (H < 10) ? "0" + H : H;
+            M = (M < 10 ) ? "0" + M : M;
+            S = (S < 10) ? "0" + S : S;
+
+            document.getElementById("D-Clock").innerHTML = H + ":" + M + ":" + S + " " + session;
+
+                let t = setTimeout(function(){
+                    showTime()
+                },1000);
+
+            // setTimeout(setTime,1000);
+        }
+        showTime();
+    </script>
+</body>
+</html>
